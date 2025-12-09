@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// お知らせ・ニュース
+model News {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  category  String   @default("info") // info, release, event
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// セミナー情報
+model Seminar {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  heldAt      DateTime // 開催日時
+  location    String   // Zoom or Offline
+  capacity    Int
+  link        String?  // 申込URL
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// お問い合わせ履歴
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  company   String?
+  email     String
+  type      String   // demo, dev, seminar, other
+  message   String
+  status    String   @default("unread") // unread, contacted, closed
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,9 @@
+export { HeroSection } from "./HeroSection";
+export { ServiceOutlineSection } from "./ServiceOutlineSection";
+export { PainPointsSection } from "./PainPointsSection";
+export { SolutionsSection } from "./SolutionsSection";
+export { ProcessSection } from "./ProcessSection";
+export { StatsSection } from "./StatsSection";
+export { WhyUsSection } from "./WhyUsSection";
+export { NewsSection } from "./NewsSection";
+export { CTASection } from "./CTASection";

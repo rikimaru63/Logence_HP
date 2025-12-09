@@ -1,0 +1,155 @@
+{
+  "project_settings": {
+    "project_name": "AI_Automation_Corporate",
+    "description": "中小企業向けAI業務自動化ツール開発・研修事業のコーポレートサイト",
+    "target_audience": "従業員30-100名規模の企業経営者・現場責任者（建設、不動産、人材派遣など）",
+    "design_standard": "Modern B2B SaaS (Inspired by Linear, 11x.ai)",
+    "tech_stack": {
+      "framework": "Next.js 14+ (App Router)",
+      "styling": "Tailwind CSS",
+      "ui_library": "Shadcn/ui",
+      "animation": "Framer Motion",
+      "icons": "Lucide React",
+      "database": "Prisma (PostgreSQL)",
+      "form_validation": "Zod + React Hook Form"
+    }
+  },
+  "logic_layer": {
+    "brand_voice": {
+      "tone": "Reliable, Tech-Savvy, Yet Human",
+      "keywords": [
+        "実務の自動化",
+        "デジタルワーカー",
+        "現場の苦痛除去",
+        "資産化"
+      ],
+      "banned_words": [
+        "魔法のような",
+        "キラキラした",
+        "抽象的なDX",
+        "ソリューション（単体での使用）"
+      ]
+    },
+    "hero_section": {
+      "catch_copy": "現場の「めんどくさい」を、AIデジタルワーカーが代行します。",
+      "sub_copy": "名刺入力、リスト作成、議事録。あなたの時間を奪う3大業務を、私たちが開発したAIエージェントに任せませんか。",
+      "cta_primary": "デモを体験する",
+      "cta_secondary": "開発・研修の相談"
+    },
+    "value_proposition": {
+      "concept": "Digital Workers, Human Results",
+      "promise": "You bring the pain. We bring the automation."
+    }
+  },
+  "structure_layer": {
+    "routing_strategy": {
+      "root": "/",
+      "pages": [
+        {
+          "path": "/services",
+          "name": "Service",
+          "desc": "プロダクト・開発・研修"
+        },
+        {
+          "path": "/company",
+          "name": "Company",
+          "desc": "企業情報・代表挨拶・アクセス"
+        },
+        {
+          "path": "/news",
+          "name": "News",
+          "desc": "お知らせ・プレスリリース"
+        },
+        {
+          "path": "/contact",
+          "name": "Contact",
+          "desc": "デモ依頼・お問い合わせ"
+        },
+        {
+          "path": "/privacy",
+          "name": "Privacy",
+          "desc": "プライバシーポリシー"
+        }
+      ]
+    },
+    "layout_requirements": {
+      "header": "Sticky backdrop-blur navigation. Logo on Left. Links Center. CTA Contact on Right.",
+      "footer": "Grid layout. Brand info, Sitemap links, Social links, Copyright."
+    },
+    "home_page_sections": [
+      "Hero (Interactive Demo/Video Background)",
+      "Pain Points (Problem Agitation)",
+      "Solutions (Bento Grid Layout - 3 Tools)",
+      "Service Flow (Process)",
+      "Trust/Philosophy (Why Us)",
+      "Latest News/Seminars (Dynamic List)",
+      "CTA (Final Push)"
+    ]
+  },
+  "visual_layer": {
+    "theme": "Dark Modern Tech",
+    "color_palette": {
+      "background": "#0B0F19",
+      "surface": "#1E293B",
+      "surface_highlight": "#334155",
+      "primary_text": "#F8FAFC",
+      "secondary_text": "#94A3B8",
+      "accent": "#6366F1",
+      "accent_glow": "0 0 20px rgba(99, 102, 241, 0.5)",
+      "border": "rgba(255, 255, 255, 0.1)"
+    },
+    "typography": {
+      "font_family_jp": "Noto Sans JP",
+      "font_family_en": "Inter",
+      "base_size": "16px",
+      "h1_style": "text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400"
+    },
+    "ui_components": {
+      "cards": "Glassmorphism effect (backdrop-blur-md) with thin borders and hover glow.",
+      "grid": "Bento Grid layout for showcasing tools.",
+      "buttons": "Gradient background with shine effect on hover."
+    }
+  },
+  "content_assets": {
+    "tools": [
+      {
+        "id": "line-biz-agent",
+        "name": "Line Biz Agent",
+        "tagline": "【名刺LINE秘書】営業メール作成時間をゼロに。",
+        "description": "スマホで撮って送るだけ。AIが挨拶メールを下書きし、組織図をマインドマップ化します。"
+      },
+      {
+        "id": "map-list-hunter",
+        "name": "Map List Hunter",
+        "tagline": "【Mapハンター】リスト購入費0円。鮮度100%。",
+        "description": "GoogleMapから「今ある店」だけを抽出。業種×地域指定で、無駄なテレアポを根絶します。"
+      },
+      {
+        "id": "zoom-struct-db",
+        "name": "Zoom Struct DB",
+        "tagline": "【Zoom構造化DB】会議の「言った言わない」を根絶。",
+        "description": "ただの文字起こしではありません。決定事項やTo-Doを構造化し、スプレッドシートへ自動格納します。"
+      }
+    ]
+  },
+  "technical_requirements": {
+    "seo_and_social": {
+      "metadata_base_url": "https://your-domain.com",
+      "title_template": "%s | AI Automation Lab",
+      "default_description": "現場の「めんどくさい」をAIで解決。名刺管理、営業リスト作成、議事録の自動化ツール開発とDX研修。",
+      "og_image": "Dynamic generation using @vercel/og or static image in /public"
+    },
+    "dynamic_content": {
+      "news_source": "Prisma Database (Model: News) OR Fallback to local JSON",
+      "seminar_source": "Prisma Database (Model: Seminar) OR Fallback to local JSON"
+    },
+    "features": {
+      "contact_form": "React Hook Form + Zod validation. Server Action for DB saving & Email sending.",
+      "analytics": "Google Tag Manager (GTM) component ready."
+    },
+    "performance": {
+      "images": "Use next/image with priority for Hero.",
+      "fonts": "next/font/google optimization."
+    }
+  }
+}
